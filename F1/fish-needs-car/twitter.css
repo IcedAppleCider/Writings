@@ -1,5 +1,5 @@
 #workskin .tw {
-  max-width: 650px;
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
   padding: 1em 0;
@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   text-indent: 0 !important; /* 防止被 general.css 的段落缩进影响 */
+  text-align: left !important; /* 防止被 general.css 的两端对齐影响 */
 }
 
 #workskin .twBody {

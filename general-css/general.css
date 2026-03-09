@@ -8,8 +8,22 @@
   --c-accent-dark: #bd1a1a;
   --c-text-strong: #212121;
   
-  --font-serif: "Noto Serif SC", "Songti SC", "SimSun", "STSong", "Georgia", "Times New Roman", serif;
-  --font-sans: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", "Arial", sans-serif;
+  /* 
+   * 跨平台字体栈 (Cross-platform font stacks)
+   * 顺序原则：西文 -> 苹果系统 -> 微软系统 -> 安卓/Linux -> 兜底
+   */
+  --font-serif: "Georgia", "Times New Roman", "Times", /* 西文衬线 */
+                "Songti SC", "STSong", "PingFang SC", "PingFang TC", /* macOS/iOS 中文衬线与兜底 */
+                "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", /* Linux/Android 衬线 */
+                "SimSun", "NSimSun", "FangSong", /* Windows 衬线 */
+                serif;
+                
+  --font-sans: -apple-system, BlinkMacSystemFont, /* macOS/iOS 系统默认 */
+               "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", /* 西文无衬线 */
+               "PingFang SC", "Hiragino Sans GB", /* macOS/iOS 中文无衬线 */
+               "Microsoft YaHei", "Microsoft YaHei UI", /* Windows 中文无衬线 */
+               "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", /* Linux/Android 中文无衬线 */
+               "Arial", sans-serif;
 }
 
 *, *::before, *::after {
@@ -46,9 +60,9 @@ body.toc-closed {
 
 /* 报头风格 (Preface) */
 #preface {
-  border-bottom: 2px solid var(--c-text-strong);
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  border-bottom: none; /* Removed the extra straight line */
+  padding-bottom: 0;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -79,11 +93,9 @@ body.toc-closed {
 /* 标签信息网格 (Meta Tags) */
 details.meta-details {
   margin: 0 auto 2rem;
-  max-width: 650px;
-  border: 1px solid var(--c-text-strong);
   border-top: 4px double var(--c-text-strong);
+  border-bottom: 1px solid var(--c-text-strong);
   background: var(--c-bg-paper);
-  box-shadow: 4px 4px 0px var(--c-text-muted);
 }
 
 details.meta-details summary {
@@ -126,11 +138,9 @@ details.meta-details[open] summary {
   padding: 1.5rem;
   /* Fallback if JS fails, otherwise details handles the border */
   margin: 0 auto 2rem;
-  max-width: 650px;
-  border: 1px solid var(--c-text-strong);
   border-top: 4px double var(--c-text-strong);
+  border-bottom: 1px solid var(--c-text-strong);
   background: var(--c-bg-paper);
-  box-shadow: 4px 4px 0px var(--c-text-muted);
 }
 
 /* When wrapped in details, remove the inner border/shadow/margin */
@@ -172,16 +182,19 @@ details.meta-details dl.tags {
 .meta blockquote.userstuff {
   font-family: var(--font-serif);
   font-size: 1.1rem;
-  color: var(--c-text-strong);
+  color: #7e7e7e;
   background: transparent;
-  border-top: 1px solid var(--c-text-muted);
-  border-bottom: 1px solid var(--c-text-muted);
-  border-left: none;
-  padding: 1.5rem 0;
-  margin: 2rem auto;
-  max-width: 650px;
+  border: none;
+  box-shadow: none;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto 1rem auto; /* Reduced bottom margin */
   text-align: center;
   font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.meta blockquote.userstuff:hover {
+  color: #434343;
 }
 
 .meta blockquote.userstuff p {
@@ -197,10 +210,10 @@ details.meta-details dl.tags {
   font-size: 1.8rem;
   text-align: center;
   color: var(--c-text-strong);
-  border-top: 2px solid var(--c-text-strong);
+  border-top: 4px double var(--c-text-strong); /* Changed to double line like INDEX */
   border-bottom: 1px solid var(--c-text-strong);
   padding: 1rem 0;
-  margin: 4rem 0 2rem;
+  margin: 1rem 0 2rem; /* Reduced top margin from 4rem to 1rem */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
