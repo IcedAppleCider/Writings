@@ -1,4 +1,6 @@
 /* general-css/general.css */
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --c-bg-outer: #ececec;
   --c-bg-paper: #ededed;
@@ -12,7 +14,7 @@
    * 跨平台字体栈 (Cross-platform font stacks)
    * 顺序原则：西文 -> 苹果系统 -> 微软系统 -> 安卓/Linux -> 兜底
    */
-  --font-serif: "Georgia", "Times New Roman", "Times", /* 西文衬线 */
+  --font-serif: "Noticia Text", "Georgia", "Times New Roman", "Times", /* 西文衬线 */
                 "Songti SC", "STSong", "PingFang SC", "PingFang TC", /* macOS/iOS 中文衬线与兜底 */
                 "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", /* Linux/Android 衬线 */
                 "SimSun", "NSimSun", "FangSong", /* Windows 衬线 */
