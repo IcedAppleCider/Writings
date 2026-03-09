@@ -1,0 +1,675 @@
+#workskin .tw {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+#workskin .tw p {
+  margin: 0;
+  padding: 0;
+}
+
+#workskin .twBody {
+  border: .05em solid #ddd;
+  border-radius: .3em;
+}
+
+#workskin .twEmbed {
+  min-width: 90%;
+  position: relative;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+}
+
+#workskin .twAvatar {
+  width: 40px;
+  height: auto;
+  float: left;
+  margin-right: 0.3em;
+  border-radius: 20px;
+}
+
+#workskin .twAvatarEmbed {
+  width: 20px;
+  height: auto;
+  float: left;
+  margin: 0em 0.3em .3em 0em;
+  border-radius: 20px;
+}
+
+#workskin .twVerified {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  padding: 0 !important;
+  margin: 0 6px !important;
+  box-sizing: border-box !important;
+  background-image: linear-gradient(to bottom left, #edcf4e 0%, #e2b719 50%, #edcf4e 100%),
+
+    radial-gradient(60% 60% at 30% 25%, rgba(255,255,255,0.35), rgba(255,255,255,0) 35%),
+
+    radial-gradient(80% 80% at 70% 75%, rgba(0,0,0,0.08), rgba(0,0,0,0) 40%);
+  background-repeat: no-repeat;
+  background-color: #e2b719 !important;
+  background-blend-mode: normal;
+  border-radius: 50% !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 0 0 1px rgba(0,0,0,0.06);
+  font-size: 0 !important;
+  line-height: 0 !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+#workskin .twVerified::after {
+  content: '\2713';
+  color: #fff;
+  font-family: "Segoe UI Symbol", "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+  position: static;
+  transform: none;
+  -webkit-transform: none;
+}
+
+#workskin .twVerifiedEmbed {
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  font-size: 9px;
+  width: 12px;
+  height: 12px;
+  margin-left: 0.3em;
+  background-color: #1DA1F2;
+  color: #fff;
+  border-radius: 50%;
+}
+
+#workskin .twImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3em;
+  margin: 0.5em 0em 0.5em 0em;
+}
+
+#workskin .twImageEmbed {
+  border-radius: 0.3em;
+  margin-top: 0.5em;
+}
+
+#workskin .twUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+#workskin .twUserInfo {
+  display: block;
+  margin-left: 10px;
+}
+
+#workskin .twUserInfo span {
+  display: inline;
+  vertical-align: middle;
+}
+
+#workskin .twName {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+#workskin .twHandle {
+  color: #536471;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+#workskin .twDot {
+  color: #536471;
+  margin: 0 4px;
+}
+
+#workskin .twStats {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+}
+
+#workskin .twStats td {
+  width: 25%;
+  text-align: left;
+  padding: 0;
+  color: #536471;
+  font-size: 13px;
+}
+
+#workskin .twStats span {
+  display: inline-block;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+#workskin .twStats span:hover {
+  color: #1DA1F2;
+}
+
+#workskin .twText span {
+  color: #1DA1F2;
+}
+
+#workskin .twTime {
+  padding: 0em 0em 0em 0.6em;
+}
+
+#workskin .twComments {
+  width: 100%;
+  font-weight: 300;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+  border-top: .05em solid #ddd;
+  color: #1DA1F2;
+}
+
+#workskin .twReply span:first-child {
+  opacity: 0.6;
+}
+
+#workskin .twReply span:last-child {
+  color: #1DA1F2;
+}
+
+#workskin .twPoll p {
+  margin: 0;
+  padding: 0;
+}
+
+#workskin .twPoll {
+  padding: .3em 0em .3em 0em;
+  margin: .5em 0em .5em 0em;
+  border-radius: .3em;
+  white-space: nowrap;
+}
+
+#workskin .twAPoll {
+  padding: .3em 0em .3em 0em;
+  margin: .5em 0em .5em 0em;
+  border: 0.08em solid #1DA1F2;
+  border-radius: 1em;
+  color: #1DA1F2;
+  text-align: center;
+}
+
+#workskin .twWin {
+  background-color: rgba(0, 149, 235, 0.5);
+}
+
+#workskin .twOpt {
+  background-color: rgba(187, 198, 206, 0.5);
+}
+
+#workskin .twNM {
+  background-color: #14242C;
+  color: #fff;
+  border-color: #3B5364;
+}
+
+#workskin .twNM .twBody {
+  border-color: #3B5364;
+}
+
+#workskin .twNM .twComments {
+  border-top: .05em solid #3B5364;
+}
+
+#workskin .twNM .twWin {
+  background-color: #74cbfb;
+}
+
+#workskin .twNM .twOpt {
+  background-color: #3B5364;
+}
+
+#workskin .twBold {
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#workskin .twImageCaption {
+  display: block;
+  margin-top: 0.25em;
+  color: #536471;
+  font-style: italic;
+  font-size: inherit;
+  line-height: 1.2;
+  transition: color 150ms ease;
+}
+
+#workskin .twImageCaption:hover {
+  color: #1DA1F2;
+}
+
+#workskin .twMention {
+  color: #1f9cf0;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 120ms ease, text-decoration 120ms ease;
+}
+
+#workskin .twMention:hover {
+  text-decoration: underline;
+}
+
+#workskin .p0 {
+  width: 0%;
+}
+
+#workskin .p1 {
+  width: 1%;
+}
+
+#workskin .p2 {
+  width: 2%;
+}
+
+#workskin .p3 {
+  width: 3%;
+}
+
+#workskin .p4 {
+  width: 4%;
+}
+
+#workskin .p5 {
+  width: 5%;
+}
+
+#workskin .p6 {
+  width: 6%;
+}
+
+#workskin .p7 {
+  width: 7%;
+}
+
+#workskin .p8 {
+  width: 8%;
+}
+
+#workskin .p9 {
+  width: 9%;
+}
+
+#workskin .p10 {
+  width: 10%;
+}
+
+#workskin .p11 {
+  width: 11%;
+}
+
+#workskin .p12 {
+  width: 12%;
+}
+
+#workskin .p13 {
+  width: 13%;
+}
+
+#workskin .p14 {
+  width: 14%;
+}
+
+#workskin .p15 {
+  width: 15%;
+}
+
+#workskin .p16 {
+  width: 16%;
+}
+
+#workskin .p17 {
+  width: 17%;
+}
+
+#workskin .p18 {
+  width: 18%;
+}
+
+#workskin .p19 {
+  width: 19%;
+}
+
+#workskin .p20 {
+  width: 20%;
+}
+
+#workskin .p21 {
+  width: 21%;
+}
+
+#workskin .p22 {
+  width: 22%;
+}
+
+#workskin .p23 {
+  width: 23%;
+}
+
+#workskin .p24 {
+  width: 24%;
+}
+
+#workskin .p25 {
+  width: 25%;
+}
+
+#workskin .p26 {
+  width: 26%;
+}
+
+#workskin .p27 {
+  width: 27%;
+}
+
+#workskin .p28 {
+  width: 28%;
+}
+
+#workskin .p29 {
+  width: 29%;
+}
+
+#workskin .p30 {
+  width: 30%;
+}
+
+#workskin .p31 {
+  width: 31%;
+}
+
+#workskin .p32 {
+  width: 32%;
+}
+
+#workskin .p33 {
+  width: 33%;
+}
+
+#workskin .p34 {
+  width: 34%;
+}
+
+#workskin .p35 {
+  width: 35%;
+}
+
+#workskin .p36 {
+  width: 36%;
+}
+
+#workskin .p37 {
+  width: 37%;
+}
+
+#workskin .p38 {
+  width: 38%;
+}
+
+#workskin .p39 {
+  width: 39%;
+}
+
+#workskin .p40 {
+  width: 40%;
+}
+
+#workskin .p41 {
+  width: 41%;
+}
+
+#workskin .p42 {
+  width: 42%;
+}
+
+#workskin .p43 {
+  width: 43%;
+}
+
+#workskin .p44 {
+  width: 44%;
+}
+
+#workskin .p45 {
+  width: 45%;
+}
+
+#workskin .p46 {
+  width: 46%;
+}
+
+#workskin .p47 {
+  width: 47%;
+}
+
+#workskin .p48 {
+  width: 48%;
+}
+
+#workskin .p49 {
+  width: 49%;
+}
+
+#workskin .p50 {
+  width: 50%;
+}
+
+#workskin .p51 {
+  width: 51%;
+}
+
+#workskin .p52 {
+  width: 52%;
+}
+
+#workskin .p53 {
+  width: 53%;
+}
+
+#workskin .p54 {
+  width: 54%;
+}
+
+#workskin .p55 {
+  width: 55%;
+}
+
+#workskin .p56 {
+  width: 56%;
+}
+
+#workskin .p57 {
+  width: 57%;
+}
+
+#workskin .p58 {
+  width: 58%;
+}
+
+#workskin .p59 {
+  width: 59%;
+}
+
+#workskin .p60 {
+  width: 60%;
+}
+
+#workskin .p61 {
+  width: 61%;
+}
+
+#workskin .p62 {
+  width: 62%;
+}
+
+#workskin .p63 {
+  width: 63%;
+}
+
+#workskin .p64 {
+  width: 64%;
+}
+
+#workskin .p65 {
+  width: 65%;
+}
+
+#workskin .p66 {
+  width: 66%;
+}
+
+#workskin .p67 {
+  width: 67%;
+}
+
+#workskin .p68 {
+  width: 68%;
+}
+
+#workskin .p69 {
+  width: 69%;
+}
+
+#workskin .p70 {
+  width: 70%;
+}
+
+#workskin .p71 {
+  width: 71%;
+}
+
+#workskin .p72 {
+  width: 72%;
+}
+
+#workskin .p73 {
+  width: 73%;
+}
+
+#workskin .p74 {
+  width: 74%;
+}
+
+#workskin .p75 {
+  width: 75%;
+}
+
+#workskin .p76 {
+  width: 76%;
+}
+
+#workskin .p77 {
+  width: 77%;
+}
+
+#workskin .p78 {
+  width: 78%;
+}
+
+#workskin .p79 {
+  width: 79%;
+}
+
+#workskin .p80 {
+  width: 80%;
+}
+
+#workskin .p81 {
+  width: 81%;
+}
+
+#workskin .p82 {
+  width: 82%;
+}
+
+#workskin .p83 {
+  width: 83%;
+}
+
+#workskin .p84 {
+  width: 84%;
+}
+
+#workskin .p85 {
+  width: 85%;
+}
+
+#workskin .p86 {
+  width: 86%;
+}
+
+#workskin .p87 {
+  width: 87%;
+}
+
+#workskin .p88 {
+  width: 88%;
+}
+
+#workskin .p89 {
+  width: 89%;
+}
+
+#workskin .p90 {
+  width: 90%;
+}
+
+#workskin .p91 {
+  width: 91%;
+}
+
+#workskin .p92 {
+  width: 92%;
+}
+
+#workskin .p93 {
+  width: 93%;
+}
+
+#workskin .p94 {
+  width: 94%;
+}
+
+#workskin .p95 {
+  width: 95%;
+}
+
+#workskin .p96 {
+  width: 96%;
+}
+
+#workskin .p97 {
+  width: 97%;
+}
+
+#workskin .p98 {
+  width: 98%;
+}
+
+#workskin .p99 {
+  width: 99%;
+}
+
+#workskin .p100 {
+  width: 100%;
+}
