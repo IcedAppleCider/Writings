@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /* BG3 Theme Colors */
+  --c-bg-outer: #f4ece2;
+  --c-bg-paper: #fffaf4;
+  --c-text-main: #2b241d;
+  --c-text-muted: #574b3c;
+  --c-text-strong: #0d0c08;
+  --c-accent: #97785d;
+  --c-accent-hover: #755b44;
+  --c-border: #d4c4b0;
+  
+  /* Heading Gradient */
+  --grad-start: #574b3c;
+  --grad-end: #2b241d;
+
+  /* Cross-platform Font Stacks */
+  --font-serif: "Spectral", "Noto Serif SC", "Georgia", "Times New Roman", "Times", "Songti SC", "STSong", "PingFang SC", "PingFang TC", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", "Arial", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--c-bg-outer);
+  color: var(--c-text-main);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: padding-right 0.3s ease;
+  padding-right: 300px; /* Default open on desktop */
+}
+
+body.toc-closed {
+  padding-right: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Layout (Matching general.css)
+   ------------------------------------------------------------------------- */
+#preface, #chapters, #afterword {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* -------------------------------------------------------------------------
+   Typography & Headings
+   ------------------------------------------------------------------------- */
+h1, h2, h3, .heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  background: linear-gradient(to right, var(--grad-start), var(--grad-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Invisible headings to help Calibre make a Table of Contents */
+.toc-heading { display: none; }
+
+/* -------------------------------------------------------------------------
+   Meta Tags & Preface
+   ------------------------------------------------------------------------- */
+p.message {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--c-text-muted);
+}
+
+/* Collapsible Meta Tags (Details/Summary) */
+details.meta-details {
+  margin: 0 auto 2rem;
+  border-top: 2px solid var(--c-accent);
+  border-bottom: 1px solid var(--c-accent);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+details.meta-details summary {
+  padding: 1rem 1.5rem;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--c-text-strong);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+}
+
+details.meta-details summary::-webkit-details-marker {
+  display: none;
+}
+
+details.meta-details summary::before {
+  content: "+ ";
+  color: var(--c-accent);
+}
+
+details.meta-details[open] summary::before {
+  content: "- ";
+}
+
+details.meta-details[open] summary {
+  border-bottom: 1px solid var(--c-accent);
+}
+
+details.meta-details .meta dl.tags,
+details.meta-details dl.tags {
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  max-width: none;
+  background: transparent;
+}
+
+.meta dl.tags {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.8rem 1.5rem;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  padding: 1.5rem;
+  margin: 0 auto 2rem auto;
+  border-top: 2px solid var(--c-accent);
+  border-bottom: 1px solid var(--c-accent);
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--c-text-main);
+}
+
+.meta dl.tags dt {
+  font-weight: bold;
+  color: var(--c-accent);
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.meta dl.tags dd {
+  margin: 0;
+}
+
+.meta dl.tags a {
+  color: var(--c-text-strong);
+  text-decoration: none;
+}
+.meta dl.tags a:hover {
+  text-decoration: underline;
+  color: var(--c-accent);
+}
+
+.byline {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--c-text-muted);
+  margin-bottom: 2rem;
+}
+
+.byline a {
+  color: var(--c-accent);
+  text-decoration: none;
+}
+.byline a:hover {
+  color: var(--c-accent-hover);
+}
+
+/* Quote / Summary */
+.meta blockquote.userstuff {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--c-text-strong);
+  background: transparent;
+  border: none;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto 1rem auto;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Chapter Headings */
+.meta.group .heading {
+  font-size: 1.8rem;
+  border: none;
+  padding: 1.5rem 0;
+  margin: 1rem 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.meta.group .heading::before,
+.meta.group .heading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 32px;
+  background: url('assets/frame-decor.svg') no-repeat center;
+  background-size: contain;
+}
+
+.meta.group .heading::before {
+  margin-bottom: 1rem;
+}
+
+.meta.group .heading::after {
+  margin-top: 1rem;
+  transform: scaleY(-1);
+}
+
+/* -------------------------------------------------------------------------
+   Content (Userstuff)
+   ------------------------------------------------------------------------- */
+.userstuff {
+  font-size: 1.1rem;
+  color: var(--c-text-main);
+}
+
+.userstuff p {
+  text-align: justify;
+  margin-bottom: 1.2em;
+  text-indent: 2em;
+}
+
+/* -------------------------------------------------------------------------
+   BG3 Custom Elements (Adapted from provided CSS)
+   ------------------------------------------------------------------------- */
+.dice-options {
+  border: none;
+  padding: 15px;
+  margin: 1.5em 0;
+  background-color: var(--c-bg-paper);
+  font-family: var(--font-sans);
+  font-size: 0.95em;
+  border-radius: 4px;
+}
+
+.dice-options ol,
+.dice-options li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-indent: 0 !important;
+}
+
+.roll-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.1em 0.5em;
+}
+
+.roll-list li > span:first-child {
+  flex-basis: 150px;
+  flex-shrink: 0;
+  margin-right: 1em;
+}
+
+.graytext {
+  color: var(--c-text-muted);
+  white-space: pre;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.text {
+  color: var(--c-text-strong);
+  font-family: var(--font-sans);
+  font-size: 0.9em;
+}
+
+.align-right {
+  color: var(--c-text-muted);
+  text-align: right;
+  padding-left: 1em;
+}
+
+.choice {
+  color: var(--c-text-strong);
+  font-family: var(--font-serif);
+  font-size: 1em;
+}
+
+.choice:hover {
+  color: var(--c-text-strong);
+  background-color: #e8dfcc;
+}
+
+.chosen {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--c-accent);
+  font-weight: bold;
+  font-family: var(--font-serif);
+  font-size: 1em;
+}
+
+.chosen:hover {
+  color: var(--c-accent-hover);
+  background-color: #e8dfcc;
+}
+
+.success:hover .choice,
+.success:hover .chosen,
+.success:hover .dice {
+  background-color: #d6e4f0 !important;
+}
+
+.fail:hover .choice,
+.fail:hover .chosen,
+.fail:hover .dice {
+  background-color: #f0d6d6 !important;
+}
+
+.dice {
+  color: #3a9101;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+.dice:hover {
+  color: #54cf02;
+}
+
+/* Character Colors */
+.redbull { color: #2f3ff0; font-weight: bold; font-family: var(--font-sans); }
+.ferrari { color: #EF1A2D; font-weight: bold; font-family: var(--font-sans); }
+.williams { color: #00A0DE; font-weight: bold; font-family: var(--font-sans); }
+.amg { color: #00A19B; font-weight: bold; font-family: var(--font-sans); }
+.mclaren { color: #FF8000; font-weight: bold; font-family: var(--font-sans); }
+.haas { color: #E6002B; font-weight: bold; font-family: var(--font-sans); }
+.alpine { color: #EC0374; font-weight: bold; font-family: var(--font-sans); }
+
+.textchoice1 {
+  color: var(--c-text-main);
+  padding-left: 1em;
+}
+
+.aligned {
+  color: var(--c-text-main);
+  font-family: monospace;
+}
+
+.handwriting {
+  color: var(--c-accent);
+  font-family: 'STKaiTi', cursive, var(--font-serif);
+  font-style: italic;
+}
+
+/* In-game Books and Letters */
+.book-text, .letter {
+  font-family: var(--font-serif);
+  border-left: 4px solid var(--c-accent);
+  padding: 15px 20px;
+  margin: 20px auto;
+  color: #110f0b;
+  background-color: #f1ebdb;
+  width: 90%;
+  max-width: 700px;
+  font-size: 1.1em;
+  text-indent: 0 !important;
+}
+
+.book-text p, .letter p {
+  text-indent: 0 !important;
+  color: #110f0b;
+}
+
+.text-gray {
+  color: var(--c-text-muted) !important;
+}
+
+.text-large {
+  font-size: 1.1em;
+  line-height: 1.35;
+}
+
+/* Darkmode Block (Used for character info) */
+.darkmode {
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: 2em;
+  margin: 2em auto;
+  text-indent: 0;
+}
+
+.darkmode h1, .darkmode h2 {
+  text-indent: 0;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.darkmode h1:first-child {
+  margin-top: 0;
+}
+
+.darkmode .text {
+  color: var(--c-accent);
+}
+
+.darkmode .normtext {
+  color: var(--c-text-main);
+  text-indent: 0;
+}
+
+.darkmode .normtext p {
+  text-indent: 0;
+}
+
+.darkmode a:link {
+  color: var(--c-text-strong);
+}
+
+.darkmode details summary .text {
+  text-decoration: underline;
+}
+
+.darkmode a:hover {
+  color: var(--c-text-strong);
+  background-color: #e8dfcc;
+}
+
+.darkmode a:visited {
+  color: var(--c-accent);
+}
+
+.darkmode a:visited:hover {
+  color: var(--c-accent-hover);
+  background-color: #e8dfcc;
+}
+
+/* -------------------------------------------------------------------------
+   TOC Sidebar
+   ------------------------------------------------------------------------- */
+#toc-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: var(--c-bg-paper);
+  border-left: 2px solid var(--c-border);
+  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+  font-family: var(--font-serif);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+body.toc-closed #toc-sidebar {
+  transform: translateX(100%);
+}
+
+#toc-toggle-btn {
+  position: absolute;
+  left: -42px;
+  top: 2rem;
+  width: 40px;
+  height: 80px;
+  background: var(--c-bg-paper);
+  color: var(--c-text-strong);
+  border: 2px solid var(--c-border);
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: var(--font-serif);
+  font-weight: bold;
+  box-shadow: -4px 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.2s, color 0.2s;
+}
+
+#toc-toggle-btn:hover {
+  background: var(--c-border);
+  color: var(--c-text-strong);
+}
+
+#toc-sidebar .toc-content {
+  padding: 2.5rem 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+#toc-sidebar h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--c-text-strong);
+  border-bottom: 2px solid var(--c-accent);
+  padding-bottom: 0.8rem;
+  margin: 0 2.5rem 2rem 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+}
+
+#toc-sidebar ul {
+  list-style: none;
+  padding: 0 2.5rem;
+  margin: 0;
+  counter-reset: chapter;
+}
+
+#toc-sidebar li {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+#toc-sidebar a {
+  text-decoration: none;
+  color: var(--c-text-main);
+  transition: all 0.2s;
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--c-text-muted);
+  font-size: 1.05rem;
+}
+
+#toc-sidebar a::before {
+  counter-increment: chapter;
+  content: "CH. " counter(chapter) " \2014 ";
+  font-size: 0.85em;
+  color: var(--c-text-muted);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+#toc-sidebar a:hover, #toc-sidebar a.active {
+  color: var(--c-accent);
+  border-bottom: 1px solid var(--c-accent);
+  font-weight: bold;
+}
+
+#toc-sidebar a.active::before {
+  color: var(--c-accent);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  body {
+    padding-right: 0 !important;
+  }
+  
+  #toc-sidebar {
+    width: 100vw;
+    border-left: none;
+  }
+  
+  body:not(.toc-closed) #toc-toggle-btn {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--c-border);
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    z-index: 1001;
+  }
+  
+  body.toc-closed #toc-toggle-btn {
+    position: absolute;
+    left: -28px;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 60px;
+    font-size: 1rem;
+    border: 2px solid var(--c-border);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    box-shadow: -3px 3px 10px rgba(0,0,0,0.1);
+    z-index: 1001;
+  }
+}
+
+@media (max-width: 768px) {
+  #preface, #chapters, #afterword {
+    padding: 2rem 2.5rem; /* 左右对称的 padding，增加到 2.5rem 约 40px，确保不被 26px 的按钮遮挡 */
+  }
+  .userstuff p {
+    text-indent: 0;
+  }
+  
+  /* Mobile Meta Tags Layout */
+  .meta dl.tags {
+    display: block;
+    padding: 1rem;
+  }
+  .meta dl.tags dt {
+    text-align: left;
+    margin-top: 1.2rem;
+  }
+  .meta dl.tags dt:first-child {
+    margin-top: 0;
+  }
+  .meta dl.tags dd {
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+}
