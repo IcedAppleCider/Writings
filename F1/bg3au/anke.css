@@ -1,0 +1,264 @@
+#workskin .dice-options {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin: 1px 0;
+  background-color: #110f0b;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+#workskin .darkmode {
+  background-color: #110f0b;
+  font-family: "Libre Baskerville", Sina Nova, Times New Roman;
+  margin: 2em auto;
+  padding: 1em 1em 2em 3em;
+  text-indent: -3em;
+}
+
+#workskin .darkmode h1,
+#workskin .darkmode h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: left;
+  text-indent: -1em;
+}
+
+#workskin .darkmode h1:first-child {
+  margin-top: 0;
+}
+
+#workskin .darkmode .text {
+  color: #c19976;
+  font-family: "Libre Baskerville", "Sina Nova", "  Times New Roman", serif;
+  margin-right: 3px;
+  padding-left: 20px;
+}
+
+#workskin .darkmode .normtext {
+  color: #b38e6e;
+  font-family: "Times New Roman", 'Noto Serif CJK SC', 'Songti SC', 'STSong', 'SimSun', 'WenQuanYi Zen Hei', Georgia, 'Times New Roman', serif;
+  padding-left: 1em;
+  text-indent: 0;
+}
+
+#workskin .darkmode .normtext ol {
+  padding-left: 1.5em;
+}
+
+#workskin .darkmode a:link {
+  font-family: "Newsreader", "PT Serif", "Noto Serif", "Times New Roman", serif;
+  color: #fef0e2;
+}
+
+#workskin .darkmode details summary .text {
+  text-decoration: underline;
+}
+
+#workskin .darkmode a:hover {
+  color: #110f0b;
+  background-color: #f1ebdb;
+}
+
+#workskin .darkmode a:visited {
+  color: #c19976;
+}
+
+#workskin .darkmode a:visited:hover {
+  color: #97785d;
+  background-color: #f1ebdb;
+}
+
+#workskin .dice-options ol,
+#workskin .dice-options li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#workskin .roll-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.1em 0.5em;
+}
+
+#workskin .roll-list li > span:first-child {
+  flex-basis: 150px;
+  flex-shrink: 0;
+  margin-right: 1em;
+}
+
+#workskin .graytext {
+  color: #f1ebdb;
+  white-space: pre;
+  font-family: 'Noto Serif CJK SC', "FreeMono", "Courier New", "Courier", monospace;
+}
+
+#workskin .text {
+  color: #ffffff;
+  font-family: "Helvetica", "Heiti SC", sans-serif;
+  font-size: 0.9em;
+}
+
+#workskin .align-right {
+  color: #575555;
+  text-align: right;
+  padding-left: 1em;
+}
+
+#workskin .choice {
+  color: #fef0e2;
+  font-family: "Times New Roman", 'Noto Serif CJK SC', 'SimSun', 'Songti SC', 'STSong', 'WenQuanYi Zen Hei', Georgia, 'Times New Roman', serif;
+  font-size: 1em;
+}
+
+#workskin .choice:hover {
+  color: #110f0b;
+  background-color: #f1ebdb;
+}
+
+#workskin .chosen {
+  color: #c19976;
+  text-decoration: underline;
+  text-decoration-color: #c19976;
+  font-weight: bold;
+  font-family: "Times New Roman", 'Noto Serif CJK SC', 'Songti SC', 'STSong', 'SimSun', 'WenQuanYi Zen Hei', Georgia, 'Times New Roman', serif;
+  font-size: 1em;
+}
+
+#workskin .chosen:hover {
+  color: #97785d;
+  background-color: #f1ebdb;
+}
+
+#workskin .success:hover .choice,
+#workskin .success:hover .chosen,
+#workskin .success:hover .dice {
+  background-color: #396088 !important;
+}
+
+#workskin .fail:hover .choice,
+#workskin .fail:hover .chosen,
+#workskin .fail:hover .dice {
+  background-color: #690f04 !important;
+}
+
+#workskin .dice {
+  color: #54cf02;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+#workskin .dice:hover {
+  color: #a0ff5a;
+}
+
+#workskin .redbull {
+  color: #2f3ff0;
+  font-weight: bold;
+  white-space: pre;
+  font-family: "Trebuchet MS", "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", "Futura", sans-serif;
+}
+
+#workskin .ferrari {
+  color: #EF1A2D;
+  font-weight: bold;
+  white-space: pre;
+  font-family: "Apple Chancery", "Snell Roundhand", "URW Chancery L", "Brush Script MT", "Lucida Handwriting", cursive;
+}
+
+#workskin .williams {
+  color: #00A0DE;
+  font-weight: bold;
+  white-space: pre;
+  font-family: "Arial", "Noto Sans", sans-serif;
+}
+
+#workskin .amg {
+  color: #00A19B;
+  font-weight: bold;
+  white-space: pre;
+  font-family: "Palatino", "URW Palladio L", "Times", "Times New Roman", serif;
+}
+
+#workskin .mclaren {
+  color: #FF8000;
+  white-space: pre;
+  font-family: "Franklin Gothic Bold", "Impact", "Haettenschweiler", "Roboto Black", fantasy;
+}
+
+#workskin .haas {
+  color: #E6002B;
+  white-space: pre;
+  font-family: "Verdana", "Helvetica", sans-serif;
+}
+
+#workskin .alpine {
+  color: #EC0374;
+  font-weight: bold;
+  white-space: pre;
+  font-family: "Georgia", "Didot", "Book Antiqua", serif;
+}
+
+#workskin .textchoice1 {
+  color: #000000;
+  padding-left: 1em;
+}
+
+#workskin .aligned {
+  color: #000000;
+  font-family: monospace;
+}
+
+#workskin .handwriting {
+  color: #000000;
+  font-family: 'STKaiTi', cursive;
+}
+
+#workskin .book-text {
+  font-family: 'Songti SC', 'STSong', 'SimSun', 'Noto Serif CJK SC', 'WenQuanYi Zen Hei', Georgia, 'Times New Roman', serif;
+  border-left: 4px solid #6c757d;
+  padding-left: 10px;
+  margin: 15px 0;
+  color: #333;
+  background-color: #f8f9fa;
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1em;
+}
+
+#workskin .letter {
+  background-color: #feffe5;
+  color: #564f03;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px auto;
+  width: 70%;
+  max-width: 700px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  text-align: justify;
+  font-family: 'Songti SC', 'STSong', 'SimSun', 'Noto Serif CJK SC', 'WenQuanYi Zen Hei', Georgia, 'Times New Roman', serif;
+  font-size: 1.1em;
+}
+
+#workskin .letter p {
+  margin-bottom: 10px;
+}
+
+#workskin .text-gray {
+  color: #536471 !important;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#workskin .text-large {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.1em;
+  line-height: 1.35;
+  font-weight: inherit;
+}
