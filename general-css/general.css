@@ -283,6 +283,10 @@ body.toc-closed #toc-sidebar {
   transition: background 0.2s, color 0.2s;
 }
 
+#toc-toggle-btn .toc-btn-icon {
+  display: none;
+}
+
 #toc-toggle-btn:hover {
   background: var(--c-text-strong);
   color: var(--c-bg-paper);

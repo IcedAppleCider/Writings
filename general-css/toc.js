@@ -66,12 +66,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function updateBtnIcon() {
     const isClosed = document.body.classList.contains("toc-closed");
+    let textIcon = isClosed ? "«" : "»";
     if (window.innerWidth <= 1024 && !isClosed) {
-      toggleBtn.innerHTML = "✕"; // Close icon when open on mobile
-    } else {
-      // Use text/symbols that look like print marks
-      toggleBtn.innerHTML = isClosed ? "«" : "»";
+      textIcon = "✕"; // Close icon when open on mobile
     }
+    
+    toggleBtn.innerHTML = `
+      <span class="toc-btn-text">${textIcon}</span>
+      <span class="toc-btn-icon">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </span>
+    `;
   }
   
   updateBtnIcon();
